@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/bloom-filter.iml" filepath="$PROJECT_DIR$/bloom-filter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/bloom-filter_main.iml" filepath="$PROJECT_DIR$/.idea/modules/bloom-filter_main.iml" group="bloom-filter" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/bloom-filter_test.iml" filepath="$PROJECT_DIR$/.idea/modules/bloom-filter_test.iml" group="bloom-filter" />
+    </modules>
+  </component>
+</project>
