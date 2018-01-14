@@ -17,9 +17,15 @@ final class BloomFilterTest {
 	void containsThrowsExceptionWhenPassedNull() {
 		final BloomFilter filter = new BloomFilter();
 
-		final Throwable exception = assertThrows(IllegalArgumentException.class, () -> {
-			filter.contains(null);
-		});
+		final Throwable exception = assertThrows(IllegalArgumentException.class, () -> filter.contains(null));
 		assertEquals(exception.getMessage(), "Null: value");
+	}
+
+	@Test
+	void containsThrowsExceptionWhenPassedEmptyString() {
+		final BloomFilter filter = new BloomFilter();
+
+		final Throwable exception = assertThrows(IllegalArgumentException.class, () -> filter.contains(""));
+		assertEquals(exception.getMessage(), "Empty: value");
 	}
 }

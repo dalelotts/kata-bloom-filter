@@ -22,3 +22,7 @@ Finally, I plan to [simulate N hash functions](http://willwhim.wpengine.com/2011
 ## Behavior
 
 - Passing `null` to the `.exists` method will throw an Illegal Argument Exception.
+
+## Areas for improvement
+
+- Replace `null` and `empty` string checks with annotations and use annotation pre-processors to inject the code at compile time.

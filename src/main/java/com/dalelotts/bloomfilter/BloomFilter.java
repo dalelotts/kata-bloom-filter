@@ -16,12 +16,16 @@ final class BloomFilter {
 	 *
 	 * @param value
 	 * 		the value for which membership is being tested.
-	 *
 	 * @throws IllegalArgumentException
-	 * 		always
+	 * 		if {@code value} argument is null or empty.
 	 */
 
 	public void contains(final String value) {
-		throw new IllegalArgumentException("Null: value");
+		if (value == null) {
+			throw new IllegalArgumentException("Null: value");
+		}
+		if (value.isEmpty()) {
+			throw new IllegalArgumentException("Empty: value");
+		}
 	}
 }
