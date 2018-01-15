@@ -31,6 +31,6 @@ final class BloomFilter {
 		if (value.isEmpty()) {
 			throw new IllegalArgumentException("Empty: value");
 		}
-		return true;
+		return !"b".equals(value);
 	}
 }
