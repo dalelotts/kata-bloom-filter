@@ -13,7 +13,7 @@ I learned a lot about Bloom Filters, non-cryptographic hashing algorithms, Java 
 When I read the problem, I did not know where to start. How will I go about selecting the _right_ hashing algorithm? 
 How will I test for _false positives_ without knowing how the selected hash algorithms will collide.
 
-TDD to the rescue (as Usual)! None of that really matters. I can trust that writing small tests that drive the 
+TDD to the rescue (as usual)! None of that really matters. I can trust that writing small tests that drive the 
 implementation forward one _baby step_ at a time will ultimately lead to a complete implementation and I don't need to 
 know everything in advance.
 
@@ -21,9 +21,11 @@ This implementation is (currently) far from complete and I will revisit this Kat
 
 ## Running the tests
 
-`git clone https://github.com/dalelotts/kata-bloom-filter`
-`cd kata-bloom-filter`
-`gradlew test`
+```
+git clone https://github.com/dalelotts/kata-bloom-filter
+cd kata-bloom-filter
+gradlew test
+```
 
 ## Areas for improvement
 
