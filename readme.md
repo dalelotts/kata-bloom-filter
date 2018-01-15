@@ -25,4 +25,14 @@ Finally, I plan to [simulate N hash functions](http://willwhim.wpengine.com/2011
 
 ## Areas for improvement
 
+This was my first attempt at this kata so this code mostly represents me getting a feel for the problem space. 
+This is a partial list of areas for improvement for this code.
+
+- Add tests that drive implementation of:
+    - computed initial size of BitSet
+    - multiple hash passes (by returning false positive) 
+    - applying a modulo on the hash values to limit space utilization
 - Replace `null` and `empty` string checks with annotations and use annotation pre-processors to inject the code at compile time.
+- Replace BitSet with some other data structure allowing `long` values for keys.
+- Replace Murmur hash with SipHash to have fewer collisions and prevent HashDOS attacks. 
+

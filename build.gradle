@@ -19,7 +19,8 @@ repositories {
 }
 
 dependencies {
-    testCompile group: 'org.apiguardian', name: 'apiguardian-api', version: '1.0.0'
+    compile 'com.sangupta:murmur:1.0.0'
+    testCompile 'org.apiguardian:apiguardian-api:1.0.0'
     testCompile 'org.junit.jupiter:junit-jupiter-engine:5.0.2'
 }
 
@@ -43,6 +44,7 @@ compileTestJava {
         options.compilerArgs = [
                 '--module-path', classpath.asPath,
                 '--add-modules', 'org.junit.jupiter.api',
+                '--add-reads', "$moduleName=org.junit.jupiter.api",
                 '--add-reads', "$moduleName=org.junit.jupiter.api",
                 '--patch-module', "$moduleName=" + files(sourceSets.test.java.srcDirs).asPath,
         ]

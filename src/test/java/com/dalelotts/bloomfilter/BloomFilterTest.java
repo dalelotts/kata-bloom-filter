@@ -24,6 +24,12 @@ final class BloomFilterTest {
 	}
 
 	@Test
+	void containsReturnsFalseWhenPassedValueHasCollisionWithJavaHashCode() {
+		filter.add("Aa");
+		assertFalse(filter.contains("BB"));
+	}
+	
+	@Test
 	void containsReturnsFalseWhenPassedValueNotInSet() {
 		assertFalse(filter.contains("b"));
 		assertFalse(filter.contains("c"));
