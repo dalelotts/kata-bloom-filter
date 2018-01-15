@@ -11,6 +11,10 @@ package com.dalelotts.bloomfilter;
 
 final class BloomFilter {
 
+	void add(final String value) {
+
+	}
+
 	/**
 	 * Returns {@code true} if this set contains the specified element.
 	 *
@@ -20,12 +24,13 @@ final class BloomFilter {
 	 * 		if {@code value} argument is null or empty.
 	 */
 
-	public void contains(final String value) {
+	boolean contains(final String value) {
 		if (value == null) {
 			throw new IllegalArgumentException("Null: value");
 		}
 		if (value.isEmpty()) {
 			throw new IllegalArgumentException("Empty: value");
 		}
+		return true;
 	}
 }
