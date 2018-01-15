@@ -19,7 +19,18 @@ final class BloomFilter {
 
 	private final BitSet bitSet = new BitSet();
 
+	/**
+	 * Add the specified value to the filter.
+	 * @param value
+	 * 	the value to add to the filter.
+	 */
 	void add(final String value) {
+		if (value == null) {
+			throw new IllegalArgumentException("Null: value");
+		}
+		if (value.isEmpty()) {
+			throw new IllegalArgumentException("Empty: value");
+		}
 		bitSet.or(computeHashes(value).stream().collect(BitSet::new, BitSet::set, BitSet::or));
 	}
 
