@@ -25,8 +25,8 @@ final class BloomFilterTest {
 
 	@Test
 	void containsReturnsFalseWhenPassedValueNotInSet() {
-		filter.add("a");
 		assertFalse(filter.contains("b"));
+		assertFalse(filter.contains("c"));
 	}
 
 	@Test

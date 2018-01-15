@@ -1,6 +1,8 @@
 /* See the file "LICENSE" for the full license governing this code. */
 package com.dalelotts.bloomfilter;
 
+import java.util.BitSet;
+
 /**
  * This class provides a way of testing for membership in a very large sets without linear (or worse) growth in memory
  * or search time.
@@ -11,8 +13,10 @@ package com.dalelotts.bloomfilter;
 
 final class BloomFilter {
 
-	void add(final String value) {
+	private final BitSet bitSet = new BitSet();
 
+	void add(final String value) {
+		bitSet.set(value.hashCode());
 	}
 
 	/**
@@ -31,6 +35,6 @@ final class BloomFilter {
 		if (value.isEmpty()) {
 			throw new IllegalArgumentException("Empty: value");
 		}
-		return !"b".equals(value);
+		return bitSet.get(value.hashCode());
 	}
 }
